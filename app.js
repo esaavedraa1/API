@@ -101,7 +101,7 @@ app.post('/Monedas_Tipo/guardar', function(req, res){
 					sgt_moneda_tipo.monet_nombre= req.query.monet_nombre,
 					sgt_moneda_tipo.monet_codigo= req.query.monet_codigo,
 					sgt_moneda_tipo.monet_pais = req.query.monet_pais
-				cliente.save(function(error, documento){
+				sgt_moneda_tipo.save(function(error, documento){
 					if(error){
 						res.send('Error.');
 					}else{
@@ -117,7 +117,6 @@ app.post('/Monedas_Tipo/eliminar', function(req, res){
 	Sgt_moneda_tipo.remove({_id: req.query._id}, function(error){
 		if(error){
 			res.send('Error.');
-
 		}else{
 			res.send('Ok');
 		}
