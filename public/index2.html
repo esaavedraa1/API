@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="aplicacion">
+<head>
+    <meta charset="utf-8" />
+    <title> Monedas Tipo</title>
+    <link type="text/css" href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="/javascripts/angular.min.js"></script>
+    <script type="text/javascript" src="/javascripts/script.js"></script>
+</head>
+<body>
+<div class="container" ng-controller="Sgt_monedas_tipo" ng-init="cargarMonedas_Tipo()">
+    <h1> Monetas Tipo </h1>
+    <form action="javascript:void(0);">
+        <div class="row">
+            <div class="span4">
+                <label> ID Moneda </label>
+                <input type="text" ng-model="monet_id" />
+            </div>
+            <div class="span4">
+                <label> Nombre </label>
+                <input type="text" ng-model="monet_nombre" />
+            </div>
+            <div class="span4">
+                <label> Codigo </label>
+                <input type="text" ng-model="monet_codigo" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <label> Pais </label>
+                <input type="text" ng-model="monet_pais" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="span4">
+                <input type="submit" value="Guardar" class="btn btn-success" ng-click="guardarMoneda_tipo()" />
+                <input type="button" value="Limpiar" class="btn btn-danger" ng-click="limpiarDatos()" />
+            </div>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th> ID </th>
+            <th> Nombre </th>
+            <th> Codigo ISO </th>
+            <th> Pais</th>
+            <th>  </th>
+            <th>  </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in sgt_monedas_tipo">
+            <td> {{item.monet_id}} </td>
+            <td> {{item.monet_nombre}} </td>
+            <td> {{item.monet_codigo}} </td>
+            <td> {{item.monet_pais}} </td>
+            <td> <a href="javascript:void(0);" class="btn btn-info" ng-click="recuperarMoneda_tipo(item._id)"> Editar </a> </td>
+            <td> <a href="javascript:void(0);" class="btn btn-danger" ng-click="eliminarMoneda_tipo(item._id)"> Eliminar </a> </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
