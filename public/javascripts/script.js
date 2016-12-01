@@ -175,7 +175,7 @@ aplicacion.controller('Sgt_monedas_tipo', function($scope, $http) {
     $scope.eliminarCliente = function(indice) {
         $http({
             method: 'POST',
-            url: '/Moneda_Tipo/eliminar',
+            url: '/Monedas_Tipo/eliminar',
             params: {
                 _id: indice
             }
