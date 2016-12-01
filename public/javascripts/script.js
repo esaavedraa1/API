@@ -116,7 +116,7 @@ aplicacion.controller('Sgt_monedas_tipo', function($scope, $http) {
         }).
         success(function(data) {
             if(typeof(data) == 'object'){
-                $scope.clientes = data;
+                $scope.sgt_monedas_tipo = data;
             }else{
                 alert('Error al intentar recuperar las Monedas Tipo.');
             }
