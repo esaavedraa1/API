@@ -66,8 +66,10 @@ app.get('/Monedas_Tipo/recuperar', function(req, res){
 	Sgt_moneda_tipo.findById(req.query._id, function(error, documento){
 		if(error){
 			res.send('Error.');
+			console.log("Error en la recuperacion")
 		}else{
 			res.send(documento);
+			console.log(documento)
 		}
 	});
 });
