@@ -125,7 +125,7 @@ aplicacion.controller('Sgt_monedas_tipo', function($scope, $http) {
             alert('Error al intentar recuperar las Monedas Tipo.');
         });
     };
-    $scope.guardarMoneda_tipo = function() {
+    $scope.guardarMoneda_Tipo = function() {
         $http({
             method: 'POST',
             url: '/Monedas_Tipo/guardar',
@@ -149,7 +149,7 @@ aplicacion.controller('Sgt_monedas_tipo', function($scope, $http) {
             alert('Error al intentar guardar la Moneda Tipo.');
         });
     }
-    $scope.recuperarMoneda_tipo = function(indice) {
+    $scope.recuperarMoneda_Tipo = function(indice) {
         $http({
             method: 'GET',
             url: '/Monedas_Tipo/recuperar',
@@ -172,7 +172,7 @@ aplicacion.controller('Sgt_monedas_tipo', function($scope, $http) {
             alert('Error al intentar recuperar la moneda tipo.');
         });
     };
-    $scope.eliminarCliente = function(indice) {
+    $scope.eliminarMoneda_Tipo = function(indice) {
         $http({
             method: 'POST',
             url: '/Monedas_Tipo/eliminar',
