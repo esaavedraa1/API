@@ -63,13 +63,13 @@ app.get('/Monedas_Tipo/listar', function(req, res){
 });
 
 app.get('/Monedas_Tipo/recuperar', function(req, res){
-	Sgt_moneda_tipo.findById(req.query._id, function(error, documento){
+	Sgt_moneda_tipo.findById(req.query._id, function(error, sgt_monedas_tipo){
 		if(error){
 			res.send('Error.');
 			console.log("Error en la recuperacion")
 		}else{
-			res.send(documento);
-			console.log(documento)
+			res.send(sgt_monedas_tipo);
+			console.log(sgt_monedas_tipo)
 		}
 	});
 });
@@ -117,6 +117,7 @@ app.post('/Monedas_Tipo/eliminar', function(req, res){
 	Sgt_moneda_tipo.remove({_id: req.query._id}, function(error){
 		if(error){
 			res.send('Error.');
+
 		}else{
 			res.send('Ok');
 		}
