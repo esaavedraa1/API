@@ -152,7 +152,7 @@ aplicacion.controller('Sgt_monedas_tipo', function($scope, $http) {
     $scope.recuperarMoneda_tipo = function(indice) {
         $http({
             method: 'GET',
-            url: '/Moneda_Tipo/recuperar',
+            url: '/Monedas_Tipo/recuperar',
             params: {
                 _id: indice
             }
