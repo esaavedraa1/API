@@ -4,7 +4,7 @@
  */
 
 var express = require('express');
-var user = require('./routes/cliente.js');
+var user = require('./routes/clienteEX.js');
 var http = require('http');
 var path = require('path');
 
